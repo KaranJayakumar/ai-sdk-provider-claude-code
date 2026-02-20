@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [3.4.2] - 2026-02-17
+
+### Fixed
+
+- **MCP server connection warnings** - When MCP servers report `failed` or `needs-auth` status during session init, a structured warning is now emitted via `logger.warn` (e.g. `[claude-code] MCP servers not connected: filesystem:failed (connection refused), exa:needs-auth`). Applies to both `doGenerate` and `doStream` paths.
+
+## [3.4.1] - 2026-02-18
+
+### Added
+
+- **External MCP examples** - Added `examples/mcp-filesystem.ts` (official `@modelcontextprotocol/server-filesystem` over stdio) and `examples/mcp-exa.ts` (Exa hosted MCP over HTTP with optional API key support).
+- **Example run scripts** - Added `example:mcp:filesystem` and `example:mcp:exa` npm scripts for quick validation of external MCP integration.
+
+### Changed
+
+- **Examples documentation** - Expanded `examples/README.md` with both new MCP examples and updated section numbering for consistency.
+
 ## [3.4.0] - 2026-02-05
 
 ### Added
